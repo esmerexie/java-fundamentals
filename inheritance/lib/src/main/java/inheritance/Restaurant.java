@@ -35,4 +35,8 @@ public class Restaurant {
     public void setPrice(int price) {
         this.price = price;
     }
+
+    public String toString(){
+        return String.format("Restaurant: %s\nStars: %d", this.name, this.reviewStars);
+    }
 }

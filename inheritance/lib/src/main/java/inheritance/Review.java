@@ -35,4 +35,5 @@ public class Review {
     public void setStars(int stars) {
         this.stars = stars;
     }
+
 }

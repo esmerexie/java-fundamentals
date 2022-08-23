@@ -15,6 +15,7 @@ class LibraryTest {
     @Test void testRestaurant(){
 
         Restaurant sut = new Restaurant("Rexie's Burgers", 3, 4);
+        assertEquals(3, 3);
     }
 
     @Test void testReview(){
