@@ -20,6 +20,6 @@ class LibraryTest {
 
     @Test void testReview(){
 
-        Review sut = new Review("rexie's burgers are amazing!!", "rexie", 5);
+        Review sut = new Review("rexie's burgers are amazing!!", "rexie", 9);
     }
 }
