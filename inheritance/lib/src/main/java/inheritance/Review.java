@@ -12,26 +12,6 @@ public class Review {
         this.stars = stars;
     }
 
-    public String getReviewForFood() {
-        return reviewForFood;
-    }
-
-    public void setReviewForFood(String reviewForFood) {
-        this.reviewForFood = reviewForFood;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public int getStars() {
-        return stars;
-    }
-
     public void setStars(int stars) {
         if(stars < 0  || stars > 5){
             throw new IllegalArgumentException("Please give a rating from 1 - 5");

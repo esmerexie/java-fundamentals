@@ -22,4 +22,9 @@ class LibraryTest {
 
         Review sut = new Review("rexie's burgers are amazing!!", "rexie", 9);
     }
+
+    @Test void testShop(){
+
+        Shop sut = new Shop("L'rileys", "shopping center for boats", 4.5f);
+    }
 }
