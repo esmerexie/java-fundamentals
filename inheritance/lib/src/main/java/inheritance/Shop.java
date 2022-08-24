@@ -15,9 +15,9 @@ public class Shop {
         this.starRating = starRating;
     }
 
-    public addReview(Review review){
-        return review.add(review);
-    }
+//    public addReview(Review review){
+//        return review.add(review);
+//    }
 
     public String toString(){
         return "Shop name: " + this.name + "Description: " + this.description + "shop rating: " + this.starRating;

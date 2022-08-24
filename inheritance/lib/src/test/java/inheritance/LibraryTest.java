@@ -27,4 +27,7 @@ class LibraryTest {
 
         Shop sut = new Shop("L'rileys", "shopping center for boats", 4.5f);
     }
+    @Test void testTheater(){
+        Theater sut = new Theater("The revengers!");
+    }
 }

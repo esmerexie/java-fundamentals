@@ -37,6 +37,6 @@ class LibraryTest {
         int[][] testMatrix = {{4, 2, 1}, {0, 6, 2}, {0, 2, 0}};
         int[] lowestArray = Library.lowestAverage(testMatrix);
         assertEquals(lowestArray, testMatrix[2]);
-        
+
     }
 }
