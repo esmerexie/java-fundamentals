@@ -3,12 +3,38 @@
  */
 package quotes;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.Reader;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        System.out.println(getaQuote());
+    }
+    public static String getaQuote(){
+//        File jsonFile = new File("app/src/main/resources/recentquotes.json")
+        Path jsonFile = Paths.get("app/src/main/resources/recentquotes.json");
+//                .equals(jsonFile.toAbsolutePath())
+        List<Books> books = null;
+        try {
+
+            Gson gson = new Gson();
+            Reader reader = Files.newBufferedReader(jsonFile);
+            books = new Gson().fromJson(reader, new TypeToken<List<Books>>() {}.getType());
+
+//            books.forEach(System.out::println);
+            reader.close();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        return books.get(0).toString();
     }
 }
