@@ -2,6 +2,8 @@ package linked.list;
 
 public class LinkedList<T>{
 
+    //Thanks to Mandy for helping me out!
+    
     public Node<T> head = null;
     public int listSize = 0;
 
