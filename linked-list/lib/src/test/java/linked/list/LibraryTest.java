@@ -51,4 +51,17 @@ class LibraryTest {
         String stringTest = LL.toString();
         assertTrue((stringTest.contains("{ 3 } -> { 7 }")));
     }
+
+    @Test void kthFromEndTest(){
+        LinkedList<Integer> sut = new LinkedList<>();
+        sut.insert(1);
+        sut.insert(5);
+        sut.insert(9);
+        sut.insert(3);
+
+        assertEquals(5, sut.kthFromEnd(1));
+        assertEquals(9, sut.kthFromEnd(2));
+        assertEquals(1, sut.kthFromEnd(0));
+        assertEquals(3, sut.kthFromEnd(3));
+    }
 }
