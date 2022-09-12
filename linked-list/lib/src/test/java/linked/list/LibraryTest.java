@@ -13,4 +13,42 @@ class LibraryTest {
         sut.setLinkedListChallenge01();
         assertTrue(true);
     }
+
+    @Test void appendTest(){
+        LinkedList<Integer> LL = new LinkedList<>();
+        LL.insert(1);
+        LL.insert(5);
+        LL.insert(9);
+        LL.insert(3);
+
+        LL.append(7);
+
+        assertTrue(LL.includes(7));
+
+    }
+
+    @Test void insertBeforeTest(){
+        LinkedList<Integer> LL = new LinkedList<>();
+        LL.insert(1);
+        LL.insert(5);
+        LL.insert(9);
+        LL.insert(3);
+
+        LL.insertBefore(1, 7);
+
+        String stringTest = LL.toString();
+        assertTrue(stringTest.contains("{ 7 } -> { 1 }"));
+    }
+
+    @Test void insertAfterTest(){
+        LinkedList<Integer> LL = new LinkedList<>();
+        LL.insert(1);
+        LL.insert(5);
+        LL.insert(9);
+        LL.insert(3);
+
+        LL.insertAfter(3, 7);
+        String stringTest = LL.toString();
+        assertTrue((stringTest.contains("{ 3 } -> { 7 }")));
+    }
 }
