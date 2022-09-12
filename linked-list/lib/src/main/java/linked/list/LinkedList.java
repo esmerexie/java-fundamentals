@@ -86,4 +86,25 @@ public class LinkedList<T>{
         }
     }
 
+    public int kthFromEnd(int k){
+        if(head == null || k < 0){
+            throw new IllegalArgumentException("List is empty");
+        }
+        if (k > this.getListSize()){
+            throw new IllegalArgumentException("List isn't long enough");
+        }
+        Node<T> current = head;
+        int kthPosition = (this.getListSize() - k);
+        System.out.println("kth position:" + kthPosition);
+        for(int i = 1; i < kthPosition; i++){
+            current = current.next;
+        }
+        return (int) current.value;
+    }
+
+    public int getListSize(){
+        return this.listSize;
+    }
+
+
 }
