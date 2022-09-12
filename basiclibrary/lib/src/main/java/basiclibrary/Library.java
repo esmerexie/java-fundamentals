@@ -48,4 +48,87 @@ public class Library {
         }
         return lowestArray;
     }
+
+    public static String analyzeWeatherTemps(int [][] monthlyTemps){
+        HashSet<Integer> uniqueTemps = new HashSet<>();
+
+        for(int i = 0; i < monthlyTemps.length; i++){
+            for(int j = 0; j < monthlyTemps[i].length; j++){
+                uniqueTemps.add(monthlyTemps[i][j]);
+            }
+        }
+
+        int minTemp = monthlyTemps[0][0];
+        int maxTemp = monthlyTemps[0][0];
+
+        for(int temp : uniqueTemps){
+            if(temp < minTemp){
+                minTemp = temp;
+            } else if (temp > maxTemp){
+                maxTemp = temp;
+            }
+        }
+
+        // Thanks to Lucy, I referenced her code for a better understanding
+        String highTempString = "High: " + maxTemp;
+        String lowTempString ="Low: " + minTemp;
+
+        int tempRange = maxTemp - minTemp;
+        int[] allTemps = new int[tempRange];
+
+        for(int i = 0; i < tempRange; i++){
+            int j = minTemp + i;
+            allTemps[i] = j;
+        }
+
+        String[] missingTempsArr = new String[tempRange - uniqueTemps.size() + 1];
+        int j = 0;
+        for(int i = 0; i < allTemps.length; i++){
+            if(!uniqueTemps.contains(allTemps[i])){
+                missingTempsArr[j] = "Never saw temperature: " + allTemps[i];
+                j = j + 1;
+            }
+        }
+
+        String missingTempsString = "";
+        for(int i = 0; i < missingTempsArr.length; i++){
+            if(i>0){
+                missingTempsString = missingTempsString + "\n";
+            }
+            missingTempsString = missingTempsString + missingTempsArr[i];
+        }
+        return highTempString + "\n" + lowTempString + "\n" + missingTempsString;
+    }
+
+    public static String tally(ArrayList<String> votes){
+
+        HashSet<String> categories = new HashSet<>();
+
+        for(String vote : votes){
+            categories.add(vote);
+        }
+
+        HashMap<String, Integer> voteTally = new HashMap<>();
+
+        for(String category : categories){
+            voteTally.put(category,0);
+        }
+
+        for(String vote : votes){
+            int voteCount = voteTally.get(vote);
+            voteTally.put(vote, voteCount + 1);
+        }
+
+        int mostVotes = 0;
+        String winner = "";
+
+        for(String category : categories){
+            if(voteTally.get(category) > mostVotes){
+                mostVotes = voteTally.get(category);
+                winner = category;
+            }
+        }
+
+        return winner + " recieved the most votes!";
+    }
 }
