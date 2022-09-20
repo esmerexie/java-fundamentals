@@ -28,3 +28,7 @@ The first iteration in the sorting method, compares the first and second values 
 ## Iteration 5
 
 ![iteration5](https://user-images.githubusercontent.com/101059597/191303195-12a77b38-a610-43a5-80d4-07951cab62d8.png)
+
+## Code
+
+![code](https://user-images.githubusercontent.com/101059597/191304362-29b3e30a-1e3d-4dda-9fdd-921ef067f1c9.png)
