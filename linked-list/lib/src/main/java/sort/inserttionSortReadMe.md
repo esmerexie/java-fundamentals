@@ -2,6 +2,10 @@
 
 This is a method that takes in an array of integers and returns the array sorted from lowest to highest value. The traversal goes through each value and compares them keeping track of temp value as it goes through the array.
 
+## Contributions 
+
+thanks to Lucy and Stanley for helping out and working together
+
 ## Pseudo Code
 
 ![Pseudo Code](https://user-images.githubusercontent.com/101059597/191302763-51d3df24-2970-47b2-9aec-474a2908a0a4.png)
