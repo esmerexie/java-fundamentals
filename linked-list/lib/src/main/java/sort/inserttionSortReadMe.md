@@ -1,10 +1,10 @@
 # Insertion Sort
 
+This is a method that takes in an array of integers and returns the array sorted from lowest to highest value. The traversal goes through each value and compares them keeping track of temp value as it goes through the array.
+
 ## Contributions 
 
 thanks to Lucy and Stanley for helping out and working together
-
-This is a method that takes in an array of integers and returns the array sorted from lowest to highest value. The traversal goes through each value and compares them keeping track of temp value as it goes through the array.
 
 ## Pseudo Code
 
