@@ -1,10 +1,10 @@
-# java-fundamentals
+# Datastructures and Algorithms
 
-files :
-trees
+## Table Of Contents
 
-Methods used :
+(this table is under going updates so it is not final but a reflection of what it should look like)
 
-
-![Code Challenge 16](https://user-images.githubusercontent.com/101059597/188802016-9073eec3-9585-415e-9e2b-4088a28092ab.png)
-![CodeChallenge17](https://user-images.githubusercontent.com/101059597/189051651-5af3f726-29c7-4c7c-bad7-0aa468d99302.png)
+- Code Challenge 28 : Quick Sort
+1. [Read Me](./linked-list/lib/src/main/sort/quickSortReadMe.md)
+2.
+3.
